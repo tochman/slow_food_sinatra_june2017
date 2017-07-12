@@ -22,5 +22,11 @@ Then(/^dish prices$/) do
 end
 
 Then(/^show med the page$/) do
-  expect(page).to have_content "Starter"
+  expect(page).to have_content "Main"
+end
+
+Given(/^the following categories exist$/) do |table|
+  table.hashes.each do | category |
+    Category.create(category)
+  end
 end
