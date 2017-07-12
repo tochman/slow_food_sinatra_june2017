@@ -1,7 +1,7 @@
 Feature: Log in a user
   As a user of the system
   In order to be able to access restricted features
-  I want to be able to log in using my credentials
+  I want to be able to create an account
 
 
 Scenario: Register an account

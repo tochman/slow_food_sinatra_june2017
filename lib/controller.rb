@@ -59,9 +59,7 @@ class SlowFood < Sinatra::Base
   end
 
   post '/create-account' do
-    #binding.pry
     user = User.create(params[:user])
-    binding.pry
     flash[:success] = "Successfully created account for #{user.username}"
     redirect '/'
   end
