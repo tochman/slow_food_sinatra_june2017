@@ -27,3 +27,9 @@ end
 Then(/^show me the page$/) do
   save_and_open_page
 end
+
+Given(/^the following menus exist$/) do |table|
+  table.hashes.each do |menu|
+    Menu.create(menu)
+  end
+end

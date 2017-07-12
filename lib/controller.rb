@@ -51,6 +51,7 @@ class SlowFood < Sinatra::Base
   end
 
   get '/' do
+    @menus = Menu.all
     erb :index
   end
 
