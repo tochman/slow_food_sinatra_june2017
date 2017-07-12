@@ -13,3 +13,17 @@ end
 Then(/^I should see "([^"]*)"$/) do |content|
   expect(page).to have_content content
 end
+
+Given(/^that there are no users in the system$/) do
+  User.first.destroy if User.any?
+end
+
+And(/^the following users exist$/) do |table|
+  table.hashes.each do |user_instance|
+    User.create(user_instance)
+  end
+end
+
+Then(/^show me the page$/) do
+  save_and_open_page
+end
