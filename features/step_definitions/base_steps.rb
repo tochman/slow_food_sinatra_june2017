@@ -4,7 +4,7 @@ end
 
 Given(/^the following dishes exist$/) do |table|
   table.hashes.each do |dish|
-    binding.pry
+    dish[:price]=dish[:price].to_i
     Dish.create(dish)
   end
 end
@@ -19,4 +19,8 @@ end
 
 Then(/^dish prices$/) do
   pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^show med the page$/) do
+  expect(page).to have_content "Starter"
 end

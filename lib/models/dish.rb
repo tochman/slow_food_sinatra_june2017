@@ -4,5 +4,5 @@ class Dish
   property :id, Serial, key: true
   property :name, String
   property :description, String
-  property :price, String
+  property :price, Integer
 end

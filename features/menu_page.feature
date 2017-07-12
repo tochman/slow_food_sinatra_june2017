@@ -11,4 +11,4 @@ Background:
 Scenario: A customer sees a list of dishes on the menu page
   Given I visit the menu page
   Then I should see "Burger Special"
-  And show me the page
+  #And show me the page
